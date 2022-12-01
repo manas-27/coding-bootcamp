@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 #navbar {
@@ -16,6 +17,7 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 45;
 }
 #mobile {
   display: none;
@@ -131,7 +133,7 @@ i {
 
 .col-2-content img {
   height: 40vh;
-  width: 100%;
+  width: 80%;
 }
 
 .btn-outline-info {
@@ -179,4 +181,46 @@ i {
 
 .col-sm-4-content button {
   margin-top: 20%;
+}
+
+/* Footer Section */
+
+.about {
+  font-size: 13px;
+  color: #fff;
+}
+
+.text-warning {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#media li {
+  display: inline;
+}
+
+.link {
+  font-size: 16px;
+}
+#media .link {
+  font-size: 25px;
+}
+
+.facebook:hover {
+  color: #0c189e;
+}
+.instagram:hover {
+  color: #b70b2e;
+}
+.linkedin:hover {
+  color: #0762c9;
+}
+
+.copyright {
+  font-size: 13px;
+  text-align: center;
+}
+.copyright a {
+  font-size: 13px;
+  margin-top: 0;
 }
