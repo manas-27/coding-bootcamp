@@ -20,8 +20,7 @@
 }
 
 h1 {
-  font-size: 45px;
-  color: #100477;
+  color: #a21202;
 }
 
 body {
@@ -130,12 +129,126 @@ i {
 
 #section-1 {
   /* background-color: #f8f9ed; */
-  background-image: linear-gradient(#cee9d3, #e5e0e0);
+
   padding: 25px;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
   /* border: 6px solid #034f08; */
   border-top: 0;
+}
+
+#section-1 .container .row .col {
+  padding-right: 40px;
+}
+
+.image {
+  align-self: flex-end;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.image img {
+  width: 440px;
+  height: auto;
+}
+.image .image_overlay {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 400px;
+  width: 400px;
+}
+.image .image_overlay > h5 {
+  color: white;
+  border-radius: 1rem;
+  border-bottom-right-radius: 0%;
+  padding: 8px 16px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  position: relative;
+  left: -8rem;
+  background: rgb(6, 173, 0);
+}
+.col-2-content .image .image_overlay > h5:nth-child(1) {
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 0%;
+  background: rgb(6, 173, 0);
+  margin-top: -2rem;
+  left: 16rem;
+  -webkit-animation: color-anim 8s linear infinite,
+    beat-anim 0.8s linear infinite;
+  animation: color-anim 8s linear infinite, beat-anim 0.8s linear infinite;
+}
+.image .image_overlay > h5:nth-child(2) {
+  background: rgb(0, 173, 173);
+  margin-top: -1.8rem;
+  left: -1rem;
+  -webkit-animation: color-anim 10s linear infinite,
+    beat-anim 1.8s linear infinite;
+  animation: color-anim 10s linear infinite, beat-anim 1.8s linear infinite;
+}
+.image .image_overlay > h5:nth-child(3) {
+  background: rgb(0, 55, 173);
+  margin-top: 2rem;
+  left: -4rem;
+  -webkit-animation: color-anim 10s linear infinite,
+    beat-anim 1.6s linear infinite;
+  animation: color-anim 10s linear infinite, beat-anim 1.6s linear infinite;
+}
+.image .image_overlay > h5:nth-child(4) {
+  background: rgb(255, 133, 133);
+  margin-top: 2rem;
+  left: -9rem;
+  -webkit-animation: color-anim 10s linear infinite,
+    beat-anim 1.2s linear infinite;
+  animation: color-anim 10s linear infinite, beat-anim 1.2s linear infinite;
+}
+.image .image_overlay > h5:nth-child(5) {
+  background: rgb(31, 117, 214);
+  margin-top: 2rem;
+  left: -7rem;
+  -webkit-animation: color-anim 10s linear infinite,
+    beat-anim 1.2s linear infinite;
+  animation: color-anim 10s linear infinite, beat-anim 1.2s linear infinite;
+}
+
+@-webkit-keyframes color-anim {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+@keyframes color-anim {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+@-webkit-keyframes beat-anim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes beat-anim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .caption h2 {
@@ -183,13 +296,76 @@ i {
 
 .col-2-content {
   align-items: center;
+  padding: 55px;
+  padding-top: 0;
 }
 
-.col-2-content img {
-  height: 40vh;
-  width: 80%;
-  border-radius: 50%;
-  display: none;
+.col-1-content .btn {
+  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background: linear-gradient(30deg, rgb(103, 254, 48), rgb(0, 139, 51));
+  border-radius: 2rem;
+  padding: 0.6rem 1.4rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.col-1-content .btn::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: -100%;
+  background: rgba(255, 240, 240, 0.8);
+  transform: skew(45deg);
+  height: 50px;
+  width: 50px;
+  -webkit-animation: shine-anim 4s linear infinite;
+  animation: shine-anim 4s linear infinite;
+}
+.col-1-content .btn:hover {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+@-webkit-keyframes shine-anim {
+  0% {
+    left: -100%;
+  }
+  8% {
+    left: 100%;
+  }
+  10% {
+    left: 100%;
+  }
+  18% {
+    left: -100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes shine-anim {
+  0% {
+    left: -100%;
+  }
+  8% {
+    left: 100%;
+  }
+  10% {
+    left: 100%;
+  }
+  18% {
+    left: -100%;
+  }
+  100% {
+    left: -100%;
+  }
 }
 
 .btn-outline-info {
